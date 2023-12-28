@@ -8,27 +8,27 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <table class="table table-bordered border-primary">
+    <table class="table table-bordered border-primary table-striped">
         <thead class="table-primary">
-            <tr>
+            <tr class="text-center">
                 <th scope="col" colspan="3"></th>
                 <?php foreach($lojas as $loja){ ?>
-                <th scope="col" colspan="2" class="text-center text-primary"><?= $loja->id ?> - <?= $loja->nome ?></th>
-                <?php } ?>
-                <th scope="col" colspan="2" class="text-center text-primary">Total</th>
+                    <th scope="col" colspan="2" class="text-primary"><?= $loja->id ?> - <?= $loja->nome ?></th>
+                    <?php } ?>
+                <th scope="col" colspan="2" class="text-primary">Total</th>
                 <th scope="col"></th>
             </tr>
-            <tr>
-                <th scope="col" class="text-center text-primary">Código</th>
-                <th scope="col" class="text-center text-primary">Descrição</th>
-                <th scope="col" class="text-center text-primary">Marca</th>
+            <tr class="text-center">
+                <th scope="col" class="text-primary">Código</th>
+                <th scope="col" class="text-primary">Descrição</th>
+                <th scope="col" class="text-primary">Marca</th>
                 <?php foreach($lojas as $loja){ ?>
-                <th scope="col" class="text-center text-primary">Venda</th>
-                <th scope="col" class="text-center text-primary">Estoque</th>
+                <th scope="col" class="text-primary">Venda</th>
+                <th scope="col" class="text-primary">Estoque</th>
                 <?php } ?>
-                <th scope="col" class="text-center text-primary">Venda</th>
-                <th scope="col" class="text-center text-primary">Estoque</th>
-                <th scope="col" class="text-center text-primary">Rank</th>
+                <th scope="col" class="text-primary">Venda</th>
+                <th scope="col" class="text-primary">Estoque</th>
+                <th scope="col" class="text-primary">Rank</th>
             </tr>
         </thead>
         <tbody>
@@ -70,7 +70,9 @@
             <?php } ?>
 
 
-            <tr>
+        </tbody>
+        <tfoot>
+            <tr class="text-end fw-bold">
             <th scope="row" colspan="3"></th>
 
             <?php 
@@ -84,14 +86,14 @@
                 $quantidadeTotalFinal += $quantidadeTotalPorLoja[$loja->id];
                 $estoqueTotalFinal += $estoqueTotalPorLoja[$loja->id];
             ?>
-            <td scope="col"><?= $quantidadeTotalPorLoja[$loja->id] ?></td>
-            <td scope="col"><?= $estoqueTotalPorLoja[$loja->id] ?></td>
+            <td scope="col" class="text-primary"><?= $quantidadeTotalPorLoja[$loja->id] ?></td>
+            <td scope="col" class="text-primary"><?= $estoqueTotalPorLoja[$loja->id] ?></td>
             <?php } ?>
-            <td scope="col"><?= $quantidadeTotalFinal ?></td>
-            <td scope="col"><?= $estoqueTotalFinal ?></td>
+            <td scope="col" class="text-primary"><?= $quantidadeTotalFinal ?></td>
+            <td scope="col" class="text-primary"><?= $estoqueTotalFinal ?></td>
             <td scope="col"></td>
             </tr>
-        </tbody>
+        </tfoot>
     </table>
     </pre>
 
