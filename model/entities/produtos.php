@@ -2,21 +2,21 @@
 
 class produto
 {
-    public int $id;
-    public int $codigo;
-    public string $descricao;
-    public string $marca;
-    public array $vendasPorLoja = [];
-    public int $quantidadeVendida = 0;
-    public int $estoqueTotal = 0;
+    public $id;
+    public $codigo;
+    public $descricao;
+    public $marca;
+    public $vendasPorLoja = [];
+    public $quantidadeVendida = 0;
+    public $estoqueTotal = 0;
 
     /**
-     * @param int $idProduto
-     * @param int $codigo
-     * @param ?string $descricao
-     * @param ?string $marca
+     * @param $idProduto
+     * @param $codigo
+     * @param $descricao
+     * @param $marca
      */
-    public function __construct(int $id, int $codigo, ?string $descricao = '', ?string $marca = '')
+    public function __construct($id, $codigo, $descricao = '', $marca = '')
     {
         $this->id = $id;
         $this->codigo = $codigo;
@@ -27,13 +27,13 @@ class produto
     /**
      * Adiciona uma venda ao produto
      * 
-     * @param loja $idLoja
-     * @param int $quantidade
-     * @param ?int $estoque
+     * @param $idLoja
+     * @param $quantidade
+     * @param $estoque
      * 
      * @return void
      */
-    public function adicionaVenda(loja $loja, int $quantidade, ?int $estoque = 0): void
+    public function adicionaVenda($loja, $quantidade, $estoque = 0)
     {
         if (!isset($this->vendasPorLoja[$loja->id])) {
             $this->vendasPorLoja[$loja->id] = [

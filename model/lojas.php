@@ -7,7 +7,7 @@ require 'entities/lojas.php';
  * 
  * @return array
  */
-function listaLojas(): array
+function listaLojas()
 {
     $lojas = [];
     $registrosDeLojas = require('DB/lojas.php');
