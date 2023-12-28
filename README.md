@@ -3,7 +3,7 @@
 
 ## Observações
 
-Este programa foi desenvolvido e testado utilizando o `PHP 8.2` no SO `Ubuntu 23.10`.
+Este programa foi desenvolvido com `PHP 8.2` e testado utilizando o `PHP 8.2` e `PHP 7.4` no SO `Ubuntu 23.10`.
 
 ## _Instalação_
 

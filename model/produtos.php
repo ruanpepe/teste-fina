@@ -7,7 +7,7 @@ require 'entities/produtos.php';
  * 
  * @return array
  */
-function listaProdutosPorRank(): array
+function listaProdutosPorRank()
 {
     $listaDeLojas = listaLojas();
     $produtos = [];
